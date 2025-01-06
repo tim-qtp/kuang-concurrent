@@ -1,3 +1,9 @@
+package com.qtp;
+
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * Description：
  * A 执行完 调用B
