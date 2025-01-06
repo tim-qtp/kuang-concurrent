@@ -50,9 +50,10 @@ class Data3 {
       while (num != 1) {
         condition1.await();
       }
+      //num为1
       System.out.println(Thread.currentThread().getName() + "==> AAAA" );
       num = 2;
-      condition2.signal();
+      condition2.signal(); //通知完以后，下面的condition2的while判断为2了，就不再等待，开始执行为2后面的代码
     }catch (Exception e) {
       e.printStackTrace();
     }finally {
@@ -66,6 +67,7 @@ class Data3 {
       while (num != 2) {
         condition2.await();
       }
+      //为2
       System.out.println(Thread.currentThread().getName() + "==> BBBB" );
       num = 3;
       condition3.signal();
