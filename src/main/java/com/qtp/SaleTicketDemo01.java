@@ -34,7 +34,7 @@ class Ticket {
   //卖票的方式
   public synchronized void sale() {
     if (number > 0) {
-      System.out.println(Thread.currentThread().getName() + "卖出了第" + (number--) + "张票剩余" + number + "张票");
+      System.out.println(Thread.currentThread().getName() + "卖出了第" + (number--) + "-张票剩余" + number + "张票");
     }
   } 
 }
